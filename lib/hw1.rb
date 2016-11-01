@@ -22,15 +22,41 @@ def is_palindrome?(phrase)
 
 # Part 2
 def max_sum_of_2(arr1, arr2)
-  
+  suma1 = arr1.inject(:+)
+  suma2 = arr2.inject(:+)
+  if suma1==suma2
+    return 0
+   else
+  [suma1,suma2].max
   # YOUR CODE HERE
+  end
 end
 
 def word_frequency(words)
+  freq= Hash.new(0)
+  words.each do |w|
+  freq[w]+=1
+  
   # YOUR CODE HERE
 end
 
 # Part 3
 class FileAnalizer
+  @nombre
+  @extension
+  def inicialice(n,e)
+    @nombre=n
+    @extension=e
+  end
+  def getNombre()
+    @nombre
+  end
+  def getExtension()
+    @extension
+  end
+  def setNombre(n)
+    @nombre=n
+  end
+  def setExtension(e)
   # YOUR CODE HERE
 end
